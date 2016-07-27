@@ -20,7 +20,7 @@
   transition-timing-function: ease-out;
 }
 body {
-  background:#e0e0e0;
+  background:#f5f5f5;
   color:#383f44;
 }
 #binder.fluid.max-1386,
@@ -28,12 +28,12 @@ body {
   max-width:100%;
 }
 .utility {
-  background:#e0e0e0;
+  background:#f5f5f5;
   right:0;
   height:54px;
   width: 100%;
   overflow: hidden;
-  border-bottom:1px solid #fff;
+  border-bottom:1px solid #dedede;
 }
 .utility .utility-wrap {
   padding:0 .8em;
@@ -97,7 +97,8 @@ input[type=search].sb-search-input {
 }
 .utility input[type=text].sb-search-input {
   border:none;
-  background:#e0e0e0;
+  background:#eddccc;
+  padding-left:1em;
 }
 .sb-icon-search,
 .sb-search-submit {
@@ -113,7 +114,7 @@ input[type=search].sb-search-input {
   cursor:pointer;
 }
 .sb-search-submit {
-  background:#fff;
+  background:#eddccc;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
   filter: alpha(opacity=0); /* IE 5-7 */
   opacity: 0;
@@ -123,7 +124,7 @@ input[type=search].sb-search-input {
   z-index: -1;
 }
 .sb-icon-search {
-  background:#e0e0e0;
+  background:#f5f5f5;
   color:#981e32;
   z-index:90;
   font-size:22px;
@@ -145,7 +146,7 @@ input[type=search].sb-search-input {
 }
 .sb-search.sb-search-open .sb-icon-search,
 .no-js .sb-search .sb-icon-search {
-  background:#e0e0e0;
+  background:#eddccc;
   color:#383f44;
   z-index:11;
 }
@@ -164,11 +165,53 @@ h1 {
 header hgroup h1.article-title {
   padding-bottom:.3em;
 }
+h2 {
+  font-size:1.8rem;
+  padding-bottom:.9em;
+  padding-top:1.5em;
+  font-weight:600;
+}
+h3 {
+  text-transform:uppercase;
+  font-weight:300;
+  font-size:1.6rem;
+}
+.aside header,
+.widget header {
+  font-size:1.4rem;
+  padding-top:1.4em;
+  padding-bottom:.8em;
+  margin-bottom:.8em;
+  border-bottom:1px solid #eddccc;
+}
+.aside ul,
+.widget ul {
+  padding-left:0;
+}
+.aside ul li,
+.widget ul li {
+  padding-bottom:.9em;
+}
+h5 {
+  text-transform: uppercase;
+}
+h6 {
+  display:inline;
+}
+h6:before {
+  content:" - ";
+}
+main ul,
+main ol,
 p {
   font-weight:300;
-  font-size:1.1rem;
+  font-size:1rem;
   line-height:1.6;
   padding-bottom:1.4em;
+}
+main ul li ul,
+main ol li ol {
+  padding-bottom:0;
 }
 a {
   color:#981e32;
@@ -178,7 +221,39 @@ a:hover,
 a:focus {
   color:#c60c30;
 }
+blockquote {
+  padding-left:1.3em;
+  letter-spacing: .5px;
+  font-family:"open sans";
+  font-weight:300;
+  color:#5D5D5D;
+}
+q,
+blockquote p {
+  font-size:1.3rem;
+  line-height: 1.4;
+}
+cite {
+  font-weight:400;
+  font-family:"open sans";
+  color:#777;
+  font-size:1.3rem;
+  font-style: italic;
+}
+/* Reverts the cite for the hgroup source */
+.source cite {
+  font-weight:300;
+  font-size:1rem;
+  text-transform: none;
+}
+q,
+blockquote cite:before {
+  content:" - ";
+}
 /* HTML elements */
+div.article-body {
+  padding-top:2em;
+}
 .button,
 button,
 input[type=submit],
@@ -216,7 +291,8 @@ input[type=button]:hover {
 }
 .aside input[type=submit],
 .widget input[type=submit] {
-  font-size:.8em
+  font-size:.9em;
+  width:100%;
 }
 .aside input[type=text],
 .aside input[type=password],
@@ -225,24 +301,100 @@ input[type=button]:hover {
 .widget input[type=password],
 .widget input[type=email] {
   height:40px;
+  width:100%;
+  margin-bottom:.8em;
+  border-color:#eddccc;
+  background-color:#eddccc;
 }
 hr {
-  border-color:#fff;
-  background-color:#fff;
+  border-color:#eddccc;
+  background-color:#eddccc;
   margin-top:2em;
 }
+.featured-image {
+  height:300px;
+}
+/*** Tables ***/
+table tbody tr th {
+  font-size:1.1rem;
+  border-bottom:1px rgba(127,127,127,0.2) solid;
+  padding-bottom:.7em;
+}
+table tbody tr {
+  font-size:1rem;
+  word-break:normal;
+}
+table tbody tr.odd,
+.tablepress .odd td{
+  background-color:#eddccc;
+}
+table tbody tr td {
+  padding:.6em;
+}
+table {
+  padding-bottom:1.1em;
+  border-bottom:1px rgba(127,127,127,0.2) solid;
+  margin-bottom:2em;
+}
+
+/**** TablePress ****/
+.dataTables_length,
+.dataTables_filter {
+  margin-bottom:1em;
+}
+
+.dataTables_wrapper label input {
+  height:25px;
+  background:#eddccc;
+  border-radius:0;
+  border:1px solid #cacaca;
+  font-size:1.5rem;
+  color:#585858;
+}
+.dataTables_wrapper label input,
+.dataTables_wrapper label select {
+  height:25px;
+  font-size:.8rem;
+}
+table.tablepress thead tr th,
+.tablepress tfoot th {
+  font-size:1.1rem;
+  border-bottom:1px solid #e5e5e5;
+
+  background:transparent;
+}
+.tablepress tfoot th {
+  font-size:1rem;
+  color:#585858;
+}
+.tablepress .sorting:hover,
+.tablepress .sorting_asc,
+.tablepress .sorting_desc {
+  color:black;
+  background:#f7f7f7;
+}
+.dataTables_paginate a,
+.paging_simple .paginate_button.next:after,
+.paging_simple .paginate_button.previous:before {
+  text-shadow:none;
+  color: #981e32 !important;
+  border:none;
+}
+.tablepress-table-description {
+  margin:2em 0;
+}
 /* Homepage classes */
-.home-banner .row,
-.home-footer .row {
+.large-banner .row,
+.medium-banner .row {
   background-color:rgba(69,69,69,.6);
   color:#fff;
   padding:3em 0;
 }
-.home-footer {
+.medium-banner {
   background-position: bottom;
 }
-.home-banner button,
-.home-banner a.button {
+.large-banner button,
+.large-banner a.button {
   position:absolute;
   top:50%;
 }
@@ -290,4 +442,63 @@ hr {
 }
 .staff.more:hover a {
     color:#fff;
+}
+/*** Gravity forms ***/
+.gform_wrapper h3.gform_title {
+  font-size: 1.6rem;
+}
+.gform_wrapper span.gform_description {
+  font-size:1.1rem;
+  line-height:1.7rem;
+}
+.gform_wrapper .gf_progressbar {
+  border-radius:0;
+  box-shadow: none;
+}
+.gform_wrapper .percentbar_blue {
+  background-image:none;
+  background-color: #f6861f;
+}
+main label,
+main legend,
+.gform_wrapper .top_label .gfield_label {
+  font-weight:600;
+  font-size:1rem;
+  margin-top:2em;
+}
+.gfield_html h3 {
+  margin-top:2em;
+}
+.gform_wrapper .gfield_checkbox li label,
+.gform_wrapper .gfield_radio li label {
+  font-size:1rem;
+  font-weight:400;
+}
+.gform_wrapper .gfield_date_day label,
+.gform_wrapper .gfield_date_month label,
+.gform_wrapper .gfield_date_year label,
+.gform_wrapper .gfield_time_ampm label,
+.gform_wrapper .gfield_time_hour label,
+.gform_wrapper .gfield_time_minute label,
+.gform_wrapper .ginput_complex label,
+.gform_wrapper .instruction {
+  font-weight:400;
+  margin-bottom: 1.6em;
+}
+.gform_wrapper .gform_page_footer .button.gform_next_button,
+.gform_wrapper .gform_page_footer .button.gform_previous_button {
+  background:transparent;
+  color:#4f868e;
+  font-size:1.3rem;
+}
+.gform_wrapper .gform_page_footer .button.gform_next_button:hover,
+.gform_wrapper .gform_page_footer .button.gform_previous_button:hover {
+  color:#c60c30;
+}
+.gform_wrapper input[type=submit] {
+  float:right;
+  width:30%;
+}
+.gform_wrapper textarea.large {
+	padding:.8em;
 }

@@ -23,7 +23,8 @@ if ( true === spine_get_option( 'main_header_show' ) ) :
 <div class="utility">
   <div class="utility-wrap"> <!-- This way we can keep a width on the items so that they may not exceed off the screen -->
     <header role="banner" data-section="<?php echo esc_attr( $spine_main_header_values['section_title'] ); ?>" data-pagetitle="<?php echo esc_attr( $spine_main_header_values['page_title'] ); ?>" data-posttitle="<?php echo esc_attr( $spine_main_header_values['post_title'] ); ?>" data-default="<?php echo esc_html( $spine_main_header_values['sup_header_default'] ); ?>" data-alternate="<?php echo esc_html( $spine_main_header_values['sup_header_alternate'] ); ?>">
-<?php echo wp_kses_post( strip_tags( $spine_main_header_values['sup_header_default'], '<a>' ) ); ?>
+      <a href="/">
+<?php echo wp_kses_post( strip_tags( $spine_main_header_values['sup_header_default'] ) ); ?></a>
     </header>
     <div id="sb-search" class="sb-search">
       <form>
