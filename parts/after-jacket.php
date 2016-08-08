@@ -1,6 +1,6 @@
 <?php
 // Add a search element after the jacket container.
 ?>
-<script>
+<!--<script>
   new UISearch( document.getElementById( 'sb-search' ) );
-</script>
+</script>-->

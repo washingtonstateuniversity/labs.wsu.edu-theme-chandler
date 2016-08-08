@@ -1,3 +1,6 @@
+<div id="sb-search" class="sb-search">
+    <span class="sb-icon-search"></span>
+</div>
 <?php
 
 /**
@@ -26,13 +29,9 @@ if ( true === spine_get_option( 'main_header_show' ) ) :
       <a href="/">
 <?php echo wp_kses_post( strip_tags( $spine_main_header_values['sup_header_default'] ) ); ?></a>
     </header>
-    <div id="sb-search" class="sb-search">
-      <form>
-        <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
-        <input class="sb-search-submit" type="submit" value="">
-        <span class="sb-icon-search"></span>
-      </form>
-    </div>
+  </div>
+  <div class="primary-search">
+    <?php get_search_form(); ?>
   </div>
 </div>
 <?php
