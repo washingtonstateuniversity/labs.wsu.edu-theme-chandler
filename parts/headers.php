@@ -30,9 +30,9 @@ if ( true === spine_get_option( 'main_header_show' ) ) :
 <?php echo wp_kses_post( strip_tags( $spine_main_header_values['sup_header_default'] ) ); ?></a>
     </header>
   </div>
-  <div class="primary-search">
-    <?php get_search_form(); ?>
-  </div>
+</div>
+<div class="primary-search">
+  <?php get_search_form(); ?>
 </div>
 <?php
 endif;
