@@ -12,11 +12,7 @@ function wsu_labs_chandler_enqueue_scripts() {
 */
 add_theme_support( 'html5', array( 'search-form' ) );
 
-add_filter( 'get_search_form', 'search_form_placeholder' );
 function search_form_placeholder( $html ) {
-    /*if ( current_theme_supports( 'html5', 'search-form' ) ) {
-        $html = str_replace( 'placeholder="Change me"', 'placeholder="New Text"', $html );
-    }*/
-
-    return $html;
+    return str_replace( 'Search &hellip;', 'Search for...', $html );
 }
+add_filter( 'get_search_form', 'search_form_placeholder' );
