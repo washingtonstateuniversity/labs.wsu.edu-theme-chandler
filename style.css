@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.9
+ Version:        0.1.0
 */
 * {
   margin:0;
@@ -378,23 +378,25 @@ input[type=button]:hover {
 .aside input[type=submit],
 .widget input[type=submit] {
   font-size:.9em;
-  width:100%;
 }
-.aside input[type=text],
-.aside input[type=password],
-.aside input[type=email],
+aside input[type=text],
+aside input[type=password],
+aside input[type=email],
+aside input[type=search],
 .widget input[type=text],
 .widget input[type=password],
-.widget input[type=email] {
-  height:40px;
-  width:100%;
+.widget input[type=email],
+.widget input[type=search] {
+  background: #fff;
+  border-radius: 0;
+  border: 1px solid #cacaca;
+  min-height: 45px;
+  font-size: 1.5rem;
+  color: #585858;
+  padding: .2em;
   margin-bottom:.8em;
 }
-input[type=text],
-input[type=password],
-input[type=email] {
-  height:55px;
-}
+
 hr {
   margin-top:2em;
 }
