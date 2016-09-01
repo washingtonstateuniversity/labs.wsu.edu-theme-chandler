@@ -5,7 +5,7 @@
  Author:         WSU University Communications
  Author URI:     https://ucomm.wsu.edu/
  Template:       spine
- Version:        0.0.8
+ Version:        0.0.9
 */
 * {
   margin:0;
@@ -204,7 +204,7 @@ body {
 	color: #000;
 }
 .primary-search input[type="submit"] {
-	height: 84px;
+	height: 83px;
   width:120px;
 	line-height: 1rem;
 	font-size: 1rem;
