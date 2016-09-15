@@ -566,7 +566,7 @@ table.tablepress thead tr th,
   Blog, archive, 404, search, and ect
 ***************************************/
 main article header h2 {
-  padding-bottom:.5em;
+  padding-bottom:.2em;
 }
 .article-header hgroup.source,
 .article-header .hgroup.source {
